@@ -22,11 +22,11 @@ import java.util.Arrays;
  * Closed addressing hash table is used. Hash collisions
  * are resolved by chaining entries.
  * <br/>
- * Hash table tolerates hash duplicates, which are stored in
+ * Hash table tolerates small number of key duplicates, which are stored in
  * collision chain.
  * <br/>
  * If collision chain is growing large (due to bad hashing or duplicate key)
- * performance may suffer.
+ * performance may suffer dramatically.
  * 
  * @author Alexey Ragozin (alexey.ragozin@gmail.com)
  *
@@ -216,7 +216,7 @@ public abstract class SimpleHashLookup<K> {
      * 
      * @see SimpleHashLookup#reset()
      */
-    public void clean() {
+    public void clear() {
         Arrays.fill(nexts, -1);
         Arrays.fill(hashes, -1);
         Arrays.fill(heads, -1);

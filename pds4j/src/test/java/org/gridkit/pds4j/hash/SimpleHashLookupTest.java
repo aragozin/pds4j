@@ -65,7 +65,7 @@ public class SimpleHashLookupTest {
         
         verify(store, vals);
         
-        store.clean();
+        store.clear();
         
         verify(store);
 
@@ -140,9 +140,6 @@ public class SimpleHashLookupTest {
         Set<Integer> etalon = new HashSet<Integer>();
         
         for(int i = 0; i != 10000; ++i) {
-            if (i == 998) {
-                new String();
-            }
             float f = rnd.nextFloat();
             if (f > 0.5) {
                 int x = rnd.nextInt(20000);
@@ -290,9 +287,9 @@ public class SimpleHashLookupTest {
         }
 
         @Override
-        public void clean() {
+        public void clear() {
             values = new int[0];
-            super.clean();
+            super.clear();
         }
 
         @Override
