@@ -23,7 +23,7 @@
     <parent>
       <groupId>org.gridkit.pds4j</groupId>
       <artifactId>pds4j-parent</artifactId>
-      <version>0.1-SNAPSHOT</version>
+      <version>0.1</version>
       <relativePath>../pom.xml</relativePath>
     </parent>
 
